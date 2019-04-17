@@ -23,6 +23,7 @@ def minimo(A, f=lambda x: x):
             m = e
     return m
 
+
 def maximo(A, f=lambda x: x):
     """ 3): Máximo usando min(A,f). 
     Función que retorna elemento de A que maximiza la función f.
@@ -31,7 +32,7 @@ def maximo(A, f=lambda x: x):
     :param f: Función.
     :returns: elemento de A que maximiza la función.
     :rtype: float
- 
+
     """
     return minimo(A, lambda x: -f(x))
 
@@ -48,7 +49,6 @@ def qsort(A):
         return []
     return qsort([x for x in A[1:] if x < A[0]]) + A[0:1] + \
         qsort([x for x in A[1:] if x >= A[0]])
-
 
 
 def qsortf(A, comp):
