@@ -11,28 +11,32 @@ def divisores_tres(n):
             yield i
 
 
-list(divisores_tres(15))
-
-
-def Cond_filter(n, cond):
+def Cond_filter(n, cond=lambda x: x % 3 == 0):
     """2) Similar a filter, la "misma" función de 1) con un parámetro cond. La función, digamos f1 sera llamada como f(n,cond) y genera los números de 1 a n que cumplen cond.
 
-    :param n: 
-    :param cond: 
-    :returns: 
-    :rtype: 
+    :param n: int.
+    :param cond: condición.
+    :returns: números de 1 a n que cumplen condición.
+    :rtype: int.
 
     """
-    yield
+    for i in range(1, n+1):
+        if cond(i):
+            yield i
 
 
 def Parentesis(n):
-    """3) Función que generea dado un n, todas las formas correctas de escribir n parejas de paréntesis. Ej, n=3
+    """3) Función que genera dado un n, todas las formas correctas de escribir n parejas de paréntesis. Ej, n=3
     "()()()","()(())","(())()","(()())","((()))"
 
     :param n: int. 
-    :returns: parejas de paréntesis.
+    :returns: combinaciones válidas de paréntesis.
     :rtype: string.
 
     """
-    yield 
+
+    yield
+
+
+print(list(divisores_tres(15)))
+print(list(Cond_filter(15)))
