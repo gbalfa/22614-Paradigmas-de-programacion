@@ -43,6 +43,5 @@ def Parentesis(n):
                     yield "(" + s1 + ")" + s2
 
 
-print(list(divisores_tres(15)))
-print(list(Cond_filter(15)))
-print(list(Parentesis(3)))
+for value in Parentesis(5):
+    print(value)
