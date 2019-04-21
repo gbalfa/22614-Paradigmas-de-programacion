@@ -34,9 +34,15 @@ def Parentesis(n):
     :rtype: string.
 
     """
-
-    yield
+    if n == 0:
+        yield ""
+    else:
+        for k in range(0, n):
+            for s1 in Parentesis(k):
+                for s2 in Parentesis(n-k-1):
+                    yield "(" + s1 + ")" + s2
 
 
 print(list(divisores_tres(15)))
 print(list(Cond_filter(15)))
+print(list(Parentesis(3)))
