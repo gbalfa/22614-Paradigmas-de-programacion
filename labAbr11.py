@@ -13,25 +13,25 @@ def minimo(A, f=lambda x: x):
 
     :param A: Lista floats.
     :param f: Función.
-    :returns: elemento de A que minimiza la función.
-    :rtype: float
+    :returns: Elemento de A que minimiza la función.
+    :rtype: float.
 
     """
-    m = None
-    for e in A:
-        if m is None or f(m) > f(e):
-            m = e
-    return m
+    min = None
+    for elem in A:
+        if min is None or f(min) > f(elem):
+            min = elem
+    return min
 
 
 def maximo(A, f=lambda x: x):
     """ 3): Máximo usando min(A,f). 
     Función que retorna elemento de A que maximiza la función f.
 
-    :param A: Lista floats.
+    :param A: Lista float.
     :param f: Función.
-    :returns: elemento de A que maximiza la función.
-    :rtype: float
+    :returns: Elemento de A que maximiza la función.
+    :rtype: float.
 
     """
     return minimo(A, lambda x: -f(x))
@@ -40,9 +40,9 @@ def maximo(A, f=lambda x: x):
 def qsort(A):
     """ 4) Función que ordena una lista usando Quicksort.
 
-    :param A: Lista.
+    :param A: Lista floats.
     :returns: Lista ordenada.
-    :rtype: Lista.
+    :rtype: Lista floats.
 
     """
     if A == []:
@@ -54,10 +54,10 @@ def qsort(A):
 def qsortf(A, comp):
     """ 5) Sort usando función de comparación.
 
-    :param A: Lista.
+    :param A: Lista floats.
     :param comp: Operación binaria de comparación.
     :returns: Lista ordenada según criterio comparación.
-    :rtype: Lista.
+    :rtype: Lista floats.
 
     """
     if A == []:
