@@ -1,4 +1,4 @@
-def divisores_tres(n):
+def Divisores_tres(n):
     """1) Función que retorna los divisores de tres entre 1 y n.
 
     :param n: int.
@@ -42,6 +42,8 @@ def Parentesis(n):
                 for s2 in Parentesis(n-k-1):
                     yield "(" + s1 + ")" + s2
 
-
-for value in Parentesis(5):
-    print(value)
+""" Tests.
+"""
+print(list(Divisores_tres(15)))
+print(list(Cond_filter(15)))
+print(list(Parentesis(5)))
